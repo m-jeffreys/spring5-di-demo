@@ -1,0 +1,23 @@
+package guru.springframework.didemo.services;
+
+import org.springframework.context.annotation.Primary;
+import org.springframework.stereotype.Service;
+
+/**
+ * Oct 9, 2018
+ *
+ * @author mjeffreys
+ */
+
+@Service
+@Primary
+public class PrimaryGreetingService implements GreetingService
+{
+
+    @Override
+    public String sayGreeting()
+    {
+        return "Hello - Primary Greeting Service";
+    }
+
+}
