@@ -1,9 +1,10 @@
 package guru.springframework.didemo.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 
-import guru.springframework.didemo.services.GreetingServiceImpl;
+import guru.springframework.didemo.services.GreetingService;
 
 /**
  * Sep 28, 2018
@@ -15,12 +16,12 @@ import guru.springframework.didemo.services.GreetingServiceImpl;
 public class PropertyInjectedController
 {
     @Autowired
-    @Qualifer("greetingServiceImpl")
-    public GreetingServiceImpl greetingService;
+    @Qualifier("greetingServiceImpl")
+    public GreetingService greetingServiceImpl;
 
     public String sayHello()
     {
-        return greetingService.sayGreeting();
+        return greetingServiceImpl.sayGreeting();
     }
 
 }

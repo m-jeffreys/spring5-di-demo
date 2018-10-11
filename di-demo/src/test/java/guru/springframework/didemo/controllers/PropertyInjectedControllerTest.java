@@ -9,7 +9,7 @@ import guru.springframework.didemo.services.GreetingServiceImpl;
 
 /**
  * Sep 28, 2018
- * 
+ *
  * @author mjeffreys
  */
 
@@ -21,7 +21,7 @@ public class PropertyInjectedControllerTest
     public void setup() throws Exception
     {
         this.propertyInjectedController = new PropertyInjectedController();
-        this.propertyInjectedController.greetingService = new GreetingServiceImpl();
+        this.propertyInjectedController.greetingServiceImpl = new GreetingServiceImpl();
     }
 
     @Test

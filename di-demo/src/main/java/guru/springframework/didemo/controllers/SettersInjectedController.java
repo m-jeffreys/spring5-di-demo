@@ -15,7 +15,7 @@ import guru.springframework.didemo.services.GreetingService;
 @Controller
 public class SettersInjectedController
 {
-    private GreetingService greetingService;
+    private GreetingService greetingService; // GreetingServices is an interface
 
     public String sayHello()
     {
@@ -23,7 +23,8 @@ public class SettersInjectedController
     }
 
     @Autowired
-
+    // @Qualifier("setterGreetingService") // used at the method level or inside the method, as an
+    // arg to the method
     public void setGreetingService(@Qualifier("setterGreetingService") GreetingService greetingService)
     {
         this.greetingService = greetingService;

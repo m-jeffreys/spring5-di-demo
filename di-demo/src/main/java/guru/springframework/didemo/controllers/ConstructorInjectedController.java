@@ -14,7 +14,7 @@ import guru.springframework.didemo.services.GreetingService;
 @Controller
 public class ConstructorInjectedController
 {
-    private GreetingService greetingService;
+    private GreetingService greetingService;// GreetingServices is an interface
 
     // specify the class name using the @Qualifier annotation
     public ConstructorInjectedController(@Qualifier("constructorGreetingService") GreetingService greetingService)

@@ -22,13 +22,12 @@ public class DiDemoApplication
         MyController controller = (MyController) ctx.getBean("myController");
 
         // then called the method bean myController
-        controller.hello();
+        // controller.hello();
 
         System.out.println(controller.hello());
 
         System.out.println(ctx.getBean(PropertyInjectedController.class).sayHello());
         System.out.println(ctx.getBean(SettersInjectedController.class).sayHello());
         System.out.println(ctx.getBean(ConstructorInjectedController.class).sayHello());
-
     }
 }
